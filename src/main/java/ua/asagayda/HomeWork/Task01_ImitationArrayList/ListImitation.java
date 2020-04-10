@@ -19,23 +19,19 @@ public class ListImitation {
             if (arr[i] == 0) {
                 arr[i] = value;
                 break;
-            } else {
-                if (i == arr.length - 1 && arr[i] != 0) {
+            } else if (i == arr.length - 1 && arr[i] != 0) {
 
-                    int[] arr2 = new int[((arr.length / 2) * 3) + 1];
-                    for (int J = 0; J < arr.length; J++) {
-                        arr2[J] = arr[J];
-                    }
-                    arr = arr2;
-                    arr[i + 1] = value;
-                    break;
+                int[] arr2 = new int[((arr.length + 1)/ 2) * 3 ];
+                for (int J = 0; J < arr.length; J++) {
+                    arr2[J] = arr[J];
                 }
-
+                arr = arr2;
+                arr[i + 1] = value;
+                break;
             }
-
         }
     }
-    //check index +
+
     public void changeElementByIndex(int index, int value) {
         if (value == 0) {
             throw new IllegalArgumentException("int x cannot be zerro. " +
@@ -52,22 +48,23 @@ public class ListImitation {
 
     }
 
-    /*
-     * 1 2 3 4 5 6 7
-     * */
-
     public void deleteElementByIndex(int index) {
-        int[] arr2 = new int[arr.length - 1];
+        if (index > arr.length - 1) {
+            throw new IllegalArgumentException("index cannot be greater than the length of the array. " +
+                    "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.deleteElementByIndex");
+        }
+
+        int[] tempArray = new int[arr.length - 1];
 
         for (int i = 0; i < index; i++) {
-            arr2[i] = arr[i];
+            tempArray[i] = arr[i];
         }
 
         for (int i = index; i < arr.length - 1; i++) {
-            arr2[i] = arr[i + 1];
+            tempArray[i] = arr[i + 1];
         }
 
-        arr = arr2;
+        arr = tempArray;
 
     }
 
@@ -81,6 +78,7 @@ public class ListImitation {
     }
 
     public void decreaseLength(int newLength) {
+
 
         int[] b = new int[newLength];
 

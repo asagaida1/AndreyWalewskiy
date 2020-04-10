@@ -28,9 +28,23 @@ class Main {
         imitation.listOutput();
         imitation.addSymbol(11);
         imitation.listOutput();
-
-
+        imitation.deleteElementByIndex(0);
+        imitation.listOutput();
+//        imitation.deleteElementByIndex(15);
+//        imitation.listOutput();
+        imitation.addLength(10);
+        imitation.listOutput();
+        imitation.changeElementByIndex(23,10);
+        imitation.listOutput();
+        imitation.decreaseLength(1);
+        imitation.listOutput();
+        imitation.changeElementByIndex(0,1);
+        imitation.listOutput();
+        imitation.addSymbol(2);
+        imitation.listOutput();
+        imitation.addSymbol(3);
+        imitation.listOutput();
+        imitation.printListRevers();
 
     }
-
 }
