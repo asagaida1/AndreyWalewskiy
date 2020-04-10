@@ -7,9 +7,10 @@ public class ListImitation {
         arr = new int[size];
     }
 
-//	resize array
+    //	resize array
 
-    public void addSymbolToList(int value) {
+
+    public void addSymbol(int value) {
         if (value == 0) {
             throw new IllegalArgumentException("int x cannot be zerro. In ua.asagayda.AddSymbolToArray");
         }
@@ -18,7 +19,20 @@ public class ListImitation {
             if (arr[i] == 0) {
                 arr[i] = value;
                 break;
+            } else {
+                if (arr[i] != 0 && i == arr.length - 1) {
+
+                    int[] arr2 = new int[((arr.length / 2) * 3) + 1];
+                    for (int J = 0; J < arr.length; J++) {
+                        arr2[J] = arr[J];
+                    }
+                    arr = arr2;
+                    arr[i+1] = value;
+                    break;
+                }
+
             }
+
         }
     }
 
@@ -32,19 +46,19 @@ public class ListImitation {
     }
 
     /*
-    * 1 2 3 4 5 6 7
-    * */
+     * 1 2 3 4 5 6 7
+     * */
 
     public void deleteElementByIndex(int index) {
         int[] arr2 = new int[arr.length - 1];
 
         for (int i = 0; i < index; i++) {
-			arr2[i] = arr[i];
-		}
+            arr2[i] = arr[i];
+        }
 
-		for (int i = index; i < arr.length - 1; i++) {
-			arr2[i] = arr[i + 1];
-		}
+        for (int i = index; i < arr.length - 1; i++) {
+            arr2[i] = arr[i + 1];
+        }
 
         arr = arr2;
 
