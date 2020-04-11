@@ -5,6 +5,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class ListImitation {
     private int[] arr;
+    private int[] fiendIndex;
+
 
     public ListImitation(int size) {
         arr = new int[size];
@@ -192,5 +194,36 @@ public class ListImitation {
             }
         }
         arr = temp2;
+    }
+
+    public int findIndexFirstElement(int element) {
+        int index = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == element) {
+                index = i;
+                break;
+            } else {
+                index = -1;
+            }
+        }
+        return index;
+    }
+
+    public void findIndexFirstElement2(int element) {
+        int marker;
+        int index;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == element) {
+                index = i;
+                System.out.println(index);
+                break;
+            } else {
+                if (i == arr.length - 1) {
+                    index = -1;
+                    System.out.println(index);
+
+                }
+            }
+        }
     }
 }

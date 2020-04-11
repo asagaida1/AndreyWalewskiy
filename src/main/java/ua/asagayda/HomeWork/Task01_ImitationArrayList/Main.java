@@ -73,6 +73,9 @@ class Main {
         imitation.removeDuplicates();
         imitation.listOutput();
 
+        System.out.println(imitation.findIndexFirstElement(7));
+        imitation.findIndexFirstElement2(7);
+
 
     }
 }
