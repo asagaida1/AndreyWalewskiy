@@ -210,7 +210,6 @@ public class ListImitation {
     }
 
     public void findIndexFirstElement2(int element) {
-        int marker;
         int index;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == element) {
@@ -225,5 +224,23 @@ public class ListImitation {
                 }
             }
         }
+    }
+
+    public void mixingElement() {
+        int[] temp = new int[arr.length];
+//        int[] marker = new int[arr.length];
+
+
+        for (int i = 0; i < arr.length; i++) {
+            int marker = 0;
+            while(marker==0){
+                int a = (int) (Math.random() * arr.length);
+                if(temp[a]==0){
+                    temp[a]=arr[i];
+                    marker=1;
+                }
+            }
+        }
+        arr=temp;
     }
 }

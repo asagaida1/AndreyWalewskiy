@@ -75,6 +75,13 @@ class Main {
 
         System.out.println(imitation.findIndexFirstElement(7));
         imitation.findIndexFirstElement2(7);
+        imitation.findIndexFirstElement2(6);
+        imitation.findIndexFirstElement2(0);
+
+        imitation.mixingElement();
+        imitation.listOutput();
+
+
 
 
     }
