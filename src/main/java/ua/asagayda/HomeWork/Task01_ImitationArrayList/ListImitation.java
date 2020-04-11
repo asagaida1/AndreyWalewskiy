@@ -1,5 +1,7 @@
 package ua.asagayda.HomeWork.Task01_ImitationArrayList;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ListImitation {
     private int[] arr;
 
@@ -21,7 +23,7 @@ public class ListImitation {
                 break;
             } else if (i == arr.length - 1 && arr[i] != 0) {
 
-                int[] arr2 = new int[((arr.length + 1)/ 2) * 3 ];
+                int[] arr2 = new int[((arr.length + 1) / 2) * 3];
                 for (int J = 0; J < arr.length; J++) {
                     arr2[J] = arr[J];
                 }
@@ -107,7 +109,59 @@ public class ListImitation {
             }
 
         }
+        System.out.println();
 
     }
 
+    public void bubbleSort() {
+    /*Внешний цикл каждый раз сокращает фрагмент массива,
+      так как внутренний цикл каждый раз ставит в конец
+      фрагмента максимальный элемент*/
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+            /*Сравниваем элементы попарно,
+              если они имеют неправильный порядок,
+              то меняем местами*/
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+            }
+        }
+    }
+
+    //Идея подсказала что можно ставить анотацию @NotNull, это нормально?
+    // Или лучше импользовать старую конструкцию, как ниже, по аналогии как
+    // для масива second?
+
+    public void concat(@NotNull int[] first, int[] second) {
+        if (second == null) {
+            throw new IllegalArgumentException("incoming array must not be zero" +
+                    "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.concat");
+        }
+
+        int[] temp = new int[first.length + second.length];
+        for (int i = 0; i < first.length; i++) {
+            temp[i] = first[i];
+        }
+        for (int i = 0; i < second.length; i++) {
+            temp[first.length + i] = second[i];
+        }
+        first = temp;
+
+    }
+
+    public void concat2(ListImitation first, ListImitation second) {
+        if (second == null) {
+            throw new IllegalArgumentException("incoming array must not be zero" +
+                    "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.concat");
+
+        }
+
+    }
+
+    public void length(ListImitation li) {
+
+    }
 }

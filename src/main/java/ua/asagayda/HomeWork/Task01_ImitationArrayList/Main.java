@@ -34,17 +34,33 @@ class Main {
 //        imitation.listOutput();
         imitation.addLength(10);
         imitation.listOutput();
-        imitation.changeElementByIndex(23,10);
+        imitation.changeElementByIndex(23, 10);
         imitation.listOutput();
         imitation.decreaseLength(1);
         imitation.listOutput();
-        imitation.changeElementByIndex(0,1);
+        imitation.changeElementByIndex(0, 1);
         imitation.listOutput();
         imitation.addSymbol(2);
         imitation.listOutput();
         imitation.addSymbol(3);
         imitation.listOutput();
-        imitation.printListRevers();
+        imitation.addSymbol(6);
+        imitation.listOutput();
+        imitation.addSymbol(5);
+        imitation.listOutput();
+        imitation.addSymbol(4);
+        imitation.listOutput();
 
+        imitation.bubbleSort();
+        imitation.listOutput();
+
+        imitation.printListRevers();
+        imitation.listOutput();
+
+        // как горячими клавишами вызвать создание екземпляра класса,
+        // не прописывая все руками, как ниже?
+        ListImitation imitation1 = new ListImitation(3);
+        imitation1.listOutput();
     }
 }
+
