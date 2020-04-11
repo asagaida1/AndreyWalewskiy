@@ -1,5 +1,6 @@
 package ua.asagayda.HomeWork.Task01_ImitationArrayList;
 
+import com.sun.org.apache.xerces.internal.xs.ItemPSVI;
 import org.jetbrains.annotations.NotNull;
 
 public class ListImitation {
@@ -163,5 +164,33 @@ public class ListImitation {
 
     public void length(ListImitation li) {
 
+    }
+
+    public void removeDuplicates() {
+        int countDuplicates = 0;
+        int[] temp = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    temp[j] = 1;
+
+                }
+            }
+        }
+        for (int i = 0; i < temp.length; i++) {
+            if (temp[i] == 1) {
+                countDuplicates++;
+            }
+        }
+
+        int[] temp2 = new int[arr.length - countDuplicates];
+        if (countDuplicates > 0) {
+            for (int i = 0; i < temp2.length; i++) {
+                if (temp[i] != 1) {
+                    temp2[i] = arr[i];
+                }
+            }
+        }
+        arr = temp2;
     }
 }
