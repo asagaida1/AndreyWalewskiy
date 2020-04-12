@@ -1,11 +1,11 @@
 package ua.asagayda.HomeWork.Task01_ImitationArrayList;
 
-import com.sun.org.apache.xerces.internal.xs.ItemPSVI;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Arrays;
 
 public class ListImitation {
     private int[] arr;
-    private int[] fiendIndex;
 
 
     public ListImitation(int size) {
@@ -233,14 +233,24 @@ public class ListImitation {
 
         for (int i = 0; i < arr.length; i++) {
             int marker = 0;
-            while(marker==0){
+            while (marker == 0) {
                 int a = (int) (Math.random() * arr.length);
-                if(temp[a]==0){
-                    temp[a]=arr[i];
-                    marker=1;
+                if (temp[a] == 0) {
+                    temp[a] = arr[i];
+                    marker = 1;
                 }
             }
         }
-        arr=temp;
+        arr = temp;
+    }
+
+    @Override
+    public String toString() {
+        return "ListImitation{" +
+                "arr=" + Arrays.toString(arr) +
+                '}';
     }
 }
+
+
+

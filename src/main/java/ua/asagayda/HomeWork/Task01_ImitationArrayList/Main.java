@@ -1,5 +1,8 @@
 package ua.asagayda.HomeWork.Task01_ImitationArrayList;
 
+import java.util.LinkedList;
+import java.util.List;
+
 class Main {
 
 
@@ -61,6 +64,8 @@ class Main {
 //        не прописывая все руками, как ниже?
 //        ListImitation imitation1 = new ListImitation(3);
 //        imitation1.listOutput();
+
+
         imitation.addSymbol(6);
         imitation.addSymbol(6);
         imitation.addSymbol(1);
