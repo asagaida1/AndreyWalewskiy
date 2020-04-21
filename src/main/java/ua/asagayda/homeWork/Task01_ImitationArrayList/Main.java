@@ -1,7 +1,4 @@
-package ua.asagayda.HomeWork.Task01_ImitationArrayList;
-
-import java.util.LinkedList;
-import java.util.List;
+package ua.asagayda.homeWork.Task01_ImitationArrayList;
 
 class Main {
 
@@ -10,60 +7,55 @@ class Main {
 
         ListImitation imitation = new ListImitation(3);
         imitation.addSymbol(1);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(2);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(3);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(4);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(5);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(6);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(7);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(8);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(9);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(10);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(11);
-        imitation.listOutput();
+        imitation.printList();
         imitation.deleteElementByIndex(0);
-        imitation.listOutput();
+        imitation.printList();
 //        imitation.deleteElementByIndex(15);
 //        imitation.listOutput();
         imitation.addLength(10);
-        imitation.listOutput();
+        imitation.printList();
         imitation.changeElementByIndex(23, 10);
-        imitation.listOutput();
+        imitation.printList();
         imitation.decreaseLength(1);
-        imitation.listOutput();
+        imitation.printList();
         imitation.changeElementByIndex(0, 1);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(2);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(3);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(6);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(5);
-        imitation.listOutput();
+        imitation.printList();
         imitation.addSymbol(4);
-        imitation.listOutput();
+        imitation.printList();
 
-        imitation.bubbleSort();
-        imitation.listOutput();
+        imitation.sortListBubble();
+        imitation.printList();
 
         imitation.printListRevers();
-        imitation.listOutput();
-
-//        как горячими клавишами вызвать создание екземпляра класса,
-//        не прописывая все руками, как ниже?
-//        ListImitation imitation1 = new ListImitation(3);
-//        imitation1.listOutput();
+        imitation.printList();
 
 
         imitation.addSymbol(6);
@@ -74,9 +66,9 @@ class Main {
         imitation.addSymbol(4);
         imitation.addSymbol(4);
         imitation.addSymbol(4);
-        imitation.listOutput();
+        imitation.printList();
         imitation.removeDuplicates();
-        imitation.listOutput();
+        imitation.printList();
 
         System.out.println(imitation.findIndexFirstElement(7));
         imitation.findIndexFirstElement2(7);
@@ -84,9 +76,14 @@ class Main {
         imitation.findIndexFirstElement2(0);
 
         imitation.mixingElement();
-        imitation.listOutput();
+        imitation.printList();
 
 
+//        как горячими клавишами вызвать создание екземпляра класса,
+//        не прописывая все руками, как ниже?
+
+        imitation.addArrey(new int[]{1, 2, 3});
+        imitation.printList();
 
 
     }

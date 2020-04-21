@@ -1,8 +1,6 @@
-package ua.asagayda.HomeWork.Task01_ImitationArrayList;
+package ua.asagayda.homeWork.Task01_ImitationArrayList;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ListImitationTest {
 

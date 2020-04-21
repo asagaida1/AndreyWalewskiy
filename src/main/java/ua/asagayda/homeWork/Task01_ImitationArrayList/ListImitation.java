@@ -1,4 +1,4 @@
-package ua.asagayda.HomeWork.Task01_ImitationArrayList;
+package ua.asagayda.homeWork.Task01_ImitationArrayList;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -7,6 +7,9 @@ import java.util.Arrays;
 public class ListImitation {
     private int[] arr;
 
+    public int[] getArr() {
+        return arr;
+    }
 
     public ListImitation(int size) {
         arr = new int[size];
@@ -94,7 +97,7 @@ public class ListImitation {
 
     }
 
-    public void listOutput() {
+    public void printList() {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
             if (i < arr.length - 1) {
@@ -116,7 +119,7 @@ public class ListImitation {
 
     }
 
-    public void bubbleSort() {
+    public void sortListBubble() {
     /*Внешний цикл каждый раз сокращает фрагмент массива,
       так как внутренний цикл каждый раз ставит в конец
       фрагмента максимальный элемент*/
@@ -138,29 +141,23 @@ public class ListImitation {
     // Или лучше импользовать старую конструкцию, как ниже, по аналогии как
     // для масива second?
 
-    public void concat(@NotNull int[] first, int[] second) {
+    public void addArrey(int[] second) {
         if (second == null) {
             throw new IllegalArgumentException("incoming array must not be zero" +
                     "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.concat");
         }
 
-        int[] temp = new int[first.length + second.length];
-        for (int i = 0; i < first.length; i++) {
-            temp[i] = first[i];
+        int[] temp = new int[arr.length + second.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            temp[i] = arr[i];
         }
+
         for (int i = 0; i < second.length; i++) {
-            temp[first.length + i] = second[i];
+            temp[arr.length + i] = second[i];
         }
-        first = temp;
 
-    }
-
-    public void concat2(ListImitation first, ListImitation second) {
-        if (second == null) {
-            throw new IllegalArgumentException("incoming array must not be zero" +
-                    "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.concat");
-
-        }
+        arr = temp;
 
     }
 
@@ -244,12 +241,6 @@ public class ListImitation {
         arr = temp;
     }
 
-    @Override
-    public String toString() {
-        return "ListImitation{" +
-                "arr=" + Arrays.toString(arr) +
-                '}';
-    }
 }
 
 
