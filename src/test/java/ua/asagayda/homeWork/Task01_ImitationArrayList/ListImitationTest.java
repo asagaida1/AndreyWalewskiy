@@ -16,10 +16,15 @@ ListImitation listImitation = new ListImitation(3);
     }
 
 
-//    @Test
-//    void changeElementByIndex() {
-//    }
-//
+    @Test
+    void changeElementByIndex() {
+        listImitation.changeElementByIndex(1,1);
+        int [] expected = listImitation.getArr();
+        int [] actual = {0,1,0};
+        assertArrayEquals(expected, actual);
+
+    }
+
 //    @Test
 //    void deleteElementByIndex() {
 //    }
