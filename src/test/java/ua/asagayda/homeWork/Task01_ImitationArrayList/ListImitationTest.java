@@ -22,12 +22,15 @@ ListImitation listImitation = new ListImitation(3);
         int [] expected = listImitation.getArr();
         int [] actual = {0,1,0};
         assertArrayEquals(expected, actual);
-
     }
 
-//    @Test
-//    void deleteElementByIndex() {
-//    }
+    @Test
+    void deleteElementByIndex() {
+        listImitation.deleteElementByIndex(2);
+        int [] expected = listImitation.getArr();
+        int [] actual = {0,0};
+        assertArrayEquals(expected, actual);
+    }
 //
 //    @Test
 //    void addLength() {
