@@ -22,34 +22,3 @@
 В задаче не использовать методы класса Arrays, System и коллекции.
 
 
-+++++++++++++++++++++++
-.gitignore
-
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-/AndreyWalewskiy.iml
-/.gitignore
-/.idea/encodings.xml
-/target/classes/META-INF/AndreyWalewskiy.kotlin_module
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

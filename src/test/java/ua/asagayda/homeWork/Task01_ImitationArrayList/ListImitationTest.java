@@ -2,15 +2,18 @@ package ua.asagayda.homeWork.Task01_ImitationArrayList;
 
 import org.junit.jupiter.api.Test;
 
-class ListImitationTest {
+import static org.junit.jupiter.api.Assertions.*;
 
-    ListImitation imitation = new ListImitation(3);
+class ListImitationTest {
+ListImitation listImitation = new ListImitation(3);
+
     @Test
     void addSymbol() {
-       imitation.addSymbol(1);
-
-//       assertEquals(expected, actual);
-
-
+        listImitation.addSymbol(1);
+       int [] expected = listImitation.getArr();
+       int [] actual = {1,0,0};
+       assertArrayEquals(expected, actual);
     }
+
+
 }

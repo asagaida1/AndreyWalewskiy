@@ -12,7 +12,13 @@ public class ListImitation {
     }
 
     public ListImitation(int size) {
+        if (size<1){
+            throw new IllegalArgumentException("int \"size\" cannot be zerro or less than zero. " +
+                    "ua.asagayda.homeWork.Task01_ImitationArrayList.ListImitation.ListImitation");
+        }
+
         arr = new int[size];
+
     }
 
     //	resize array +
@@ -141,20 +147,20 @@ public class ListImitation {
     // Или лучше импользовать старую конструкцию, как ниже, по аналогии как
     // для масива second?
 
-    public void addArrey(int[] second) {
-        if (second == null) {
-            throw new IllegalArgumentException("incoming array must not be zero" +
+    public void addArrey(int[] secondArr) {
+        if (secondArr == null) {
+            throw new IllegalArgumentException("incoming array must not be null" +
                     "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.concat");
         }
 
-        int[] temp = new int[arr.length + second.length];
+        int[] temp = new int[arr.length + secondArr.length];
 
         for (int i = 0; i < arr.length; i++) {
             temp[i] = arr[i];
         }
 
-        for (int i = 0; i < second.length; i++) {
-            temp[arr.length + i] = second[i];
+        for (int i = 0; i < secondArr.length; i++) {
+            temp[arr.length + i] = secondArr[i];
         }
 
         arr = temp;
