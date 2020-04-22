@@ -16,4 +16,55 @@ ListImitation listImitation = new ListImitation(3);
     }
 
 
+//    @Test
+//    void changeElementByIndex() {
+//    }
+//
+//    @Test
+//    void deleteElementByIndex() {
+//    }
+//
+//    @Test
+//    void addLength() {
+//    }
+//
+//    @Test
+//    void decreaseLength() {
+//    }
+//
+//    @Test
+//    void printList() {
+//    }
+//
+//    @Test
+//    void printListRevers() {
+//    }
+//
+//    @Test
+//    void sortListBubble() {
+//    }
+//
+//    @Test
+//    void addArrey() {
+//    }
+//
+//    @Test
+//    void length() {
+//    }
+//
+//    @Test
+//    void removeDuplicates() {
+//    }
+//
+//    @Test
+//    void findIndexFirstElement() {
+//    }
+//
+//    @Test
+//    void findIndexFirstElement2() {
+//    }
+//
+//    @Test
+//    void mixingElement() {
+//    }
 }
