@@ -1,0 +1,9 @@
+1. Выдается ошибка когда запускаю проект через Maven.
+2. В методах
+   ua.asagayda.homeWork.Task01_ImitationArrayList.ListImitation.printList
+   ua.asagayda.homeWork.Task01_ImitationArrayList.ListImitation.printListRevers
+   применяется
+   System.out.print
+   System.out.println
+   это ж не критично?
+3.
