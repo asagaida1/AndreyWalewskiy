@@ -31,14 +31,31 @@ ListImitation listImitation = new ListImitation(3);
         int [] actual = {0,0};
         assertArrayEquals(expected, actual);
     }
-//
-//    @Test
-//    void addLength() {
-//    }
-//
-//    @Test
-//    void decreaseLength() {
-//    }
+
+    @Test
+    void addLength() {
+        listImitation.addLength(3);
+        int [] expected = listImitation.getArr();
+        int [] actual = {0,0,0,0,0,0};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void decreaseLength() {
+        listImitation.decreaseLength(2);
+        int [] expected = listImitation.getArr();
+        int [] actual = {0,0};
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    void decreaseLengthSholdIllegalArgumentException() {
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
+                    listImitation.decreaseLength(0);
+        });
+        assertEquals("should be less than the length of the array and greater then zero",
+                exception.getMessage());
+    }
+
 //
 //    @Test
 //    void printList() {

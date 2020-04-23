@@ -92,6 +92,10 @@ public class ListImitation {
     }
 
     public void decreaseLength(int newLength) {
+        if (newLength > arr.length || newLength <= 0){
+            throw new IllegalArgumentException("should be less than the length of the array " +
+                    "and greater then zero");
+        }
 
 
         int[] b = new int[newLength];

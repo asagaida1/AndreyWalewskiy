@@ -36,7 +36,8 @@ class Main {
         imitation.printList();
         imitation.changeElementByIndex(23, 10);
         imitation.printList();
-        imitation.decreaseLength(1);
+        System.out.println("decreaseLength: ");
+        imitation.decreaseLength(0);
         imitation.printList();
         imitation.changeElementByIndex(0, 1);
         imitation.printList();
