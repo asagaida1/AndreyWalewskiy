@@ -157,7 +157,7 @@ public class ListImitation {
                     "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.concat");
         }
 
-        if (secondArr.length<countZeroInArr()){
+        if (secondArr.length<=countZeroInArr()){
             for (int i = 0; i <secondArr.length ; i++) {
                 for (int j = 0; j <arr.length; j++) {
                     if(arr[j]==0){

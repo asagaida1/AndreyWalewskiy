@@ -1,0 +1,19 @@
+1. Выдается ошибка когда запускаю проект через Maven.
+2. В методах
+   ua.asagayda.homeWork.Task01_ImitationArrayList.ListImitation.printList
+   ua.asagayda.homeWork.Task01_ImitationArrayList.ListImitation.printListRevers
+   применяется
+   System.out.print
+   System.out.println
+   это ж не критично?
+3. не получилось написать тест для метода void printList(), printListRevers().
+   Я вижу это как написание теста сравнения двух стрингов, а метод возвращает void, как быть?
+4. Как при комите избавиться от окошка с ворнингами. И стоит ли это делать?
+5. Как горячими клавишами вызвать создание екземпляра класса,
+   не прописывая все руками?
+   Например в Eclips можно написать ключемое слово new, после которого если нажать Ctrl+Space
+   то мы получим заготовку, которая автоматически активировани как Refactor для типа "Object",
+   такого вида:
+   Object object = new Object();
+6. Как протестировать метод mixingElement, ведь каждый раз я могу получить как тот же результат
+   так и дугой результат?

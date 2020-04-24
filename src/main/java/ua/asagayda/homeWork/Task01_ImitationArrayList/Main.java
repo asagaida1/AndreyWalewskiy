@@ -37,7 +37,7 @@ class Main {
         imitation.changeElementByIndex(23, 10);
         imitation.printList();
         System.out.println("decreaseLength: ");
-        imitation.decreaseLength(0);
+        imitation.decreaseLength(1);
         imitation.printList();
         imitation.changeElementByIndex(0, 1);
         imitation.printList();
@@ -82,11 +82,12 @@ class Main {
 
 //        как горячими клавишами вызвать создание екземпляра класса,
 //        не прописывая все руками, как ниже?
+        System.out.println("addArrey: ");
 
         imitation.addArrey(new int[]{1, 2, 3});
         imitation.printList();
-
-
+        imitation.addArrey(new int[]{1});
+        imitation.printList();
     }
 }
 
