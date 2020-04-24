@@ -65,9 +65,16 @@ ListImitation listImitation = new ListImitation(3);
 //    void printListRevers() {
 //    }
 //
-//    @Test
-//    void sortListBubble() {
-//    }
+    @Test
+    void sortListBubble() {
+        listImitation.addSymbol(3);
+        listImitation.addSymbol(1);
+        listImitation.addSymbol(2);
+        listImitation.sortListBubble();
+        int [] expected = listImitation.getArr();
+        int [] actual = {1,2,3};
+        assertArrayEquals(expected, actual);
+    }
 //
 //    @Test
 //    void addArrey() {

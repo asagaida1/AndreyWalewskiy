@@ -157,22 +157,29 @@ public class ListImitation {
                     "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.concat");
         }
 
-        int[] temp = new int[arr.length + secondArr.length];
+        if (secondArr.length<countZeroInArr()){
+            for (int i = 0; i <secondArr.length ; i++) {
+                for (int j = 0; j <arr.length; j++) {
+                    if(arr[j]==0){
+                        arr[j]=secondArr[i];
+                        break;
+                    }
 
-        for (int i = 0; i < arr.length; i++) {
-            temp[i] = arr[i];
+                }
+            }
         }
+        else {
+            int[] temp = new int[arr.length + secondArr.length];
 
-        for (int i = 0; i < secondArr.length; i++) {
-            temp[arr.length + i] = secondArr[i];
+            for (int i = 0; i < arr.length; i++) {
+                temp[i] = arr[i];
+            }
+
+            for (int i = 0; i < secondArr.length; i++) {
+                temp[arr.length + i] = secondArr[i];
+            }
+            arr = temp;
         }
-
-        arr = temp;
-
-    }
-
-    public void length(ListImitation li) {
-
     }
 
     public void removeDuplicates() {
@@ -249,6 +256,16 @@ public class ListImitation {
             }
         }
         arr = temp;
+    }
+    
+    public int countZeroInArr(){
+        int countZero = 0;
+        for (int a: arr) {
+            if(a==0){
+                countZero++;
+            }
+        }
+        return countZero;
     }
 
 }
