@@ -4,6 +4,7 @@ class Main {
 
 
     public static void main(String[] args) {
+        ListImitation imitation1 = new ListImitation(5);
 
         ListImitation imitation = new ListImitation(3);
         imitation.addSymbol(1);

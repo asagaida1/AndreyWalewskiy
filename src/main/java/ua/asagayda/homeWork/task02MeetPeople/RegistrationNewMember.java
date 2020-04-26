@@ -1,6 +1,6 @@
 package ua.asagayda.homeWork.task02MeetPeople;
 
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 
 public class RegistrationNewMember {
     private String name;
@@ -25,41 +25,37 @@ public class RegistrationNewMember {
     }
 
     public RegistrationNewMember setAge(int age) {
-        if (age<18){
+        if (age < 18) {
             throw new IllegalArgumentException("When registering on the site, your age must be more than 18 years");
-        }
-        else {
+        } else {
             this.age = age;
             return this;
         }
     }
 
-    public RegistrationNewMember setName(@NotNull String name) {
-        if (name.length()<2){
+    public RegistrationNewMember setName(String name) {
+        if (name.length() < 2) {
             throw new IllegalArgumentException("Name must be at least 2 characters");
-        }
-        else{
+        } else {
             this.name = name;
             return this;
         }
     }
 
-    public RegistrationNewMember setSex(@NotNull String sex) {
-        if (!sex.equals("man")|| !sex.equals("woman")){
+    public RegistrationNewMember setSex(String sex) {
+        if (!sex.equals("man") || !sex.equals("woman")) {
             throw new IllegalArgumentException("When registering on the site, you can only choose " +
                     "between two parameters: man,  woman");
-        }
-        else {
+        } else {
             this.sex = sex;
             return this;
         }
     }
 
-    public RegistrationNewMember setCity(@NotNull String city) {
-        if(city.length()<2){
+    public RegistrationNewMember setCity(String city) {
+        if (city.length() < 2) {
             throw new IllegalArgumentException("City name cannot be less than two characters");
-        }
-        else {
+        } else {
             this.city = city;
             return this;
         }
