@@ -1,4 +1,4 @@
-package ua.asagayda.homeWork.Task01_ImitationArrayList;
+package ua.asagayda.homeWork.task01ImitationArrayList;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -14,7 +14,7 @@ public class ListImitation {
     public ListImitation(int size) {
         if (size<1){
             throw new IllegalArgumentException("int \"size\" cannot be zerro or less than zero. " +
-                    "ua.asagayda.homeWork.Task01_ImitationArrayList.ListImitation.ListImitation");
+                    "ua.asagayda.homeWork.task01ImitationArrayList.ListImitation.ListImitation");
         }
 
         arr = new int[size];
@@ -49,12 +49,12 @@ public class ListImitation {
     public void changeElementByIndex(int index, int value) {
         if (value == 0) {
             throw new IllegalArgumentException("int x cannot be zerro. " +
-                    "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.changeElementByIndex");
+                    "In ua.asagayda.HomeWork.task01ImitationArrayList.ListImitation.changeElementByIndex");
         }
 
         if (index > arr.length - 1) {
             throw new IllegalArgumentException("index cannot be greater than the length of the array. " +
-                    "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.changeElementByIndex");
+                    "In ua.asagayda.HomeWork.task01ImitationArrayList.ListImitation.changeElementByIndex");
         }
 
 
@@ -65,7 +65,7 @@ public class ListImitation {
     public void deleteElementByIndex(int index) {
         if (index > arr.length - 1) {
             throw new IllegalArgumentException("index cannot be greater than the length of the array. " +
-                    "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.deleteElementByIndex");
+                    "In ua.asagayda.HomeWork.task01ImitationArrayList.ListImitation.deleteElementByIndex");
         }
 
         int[] tempArray = new int[arr.length - 1];
@@ -154,7 +154,7 @@ public class ListImitation {
     public void addArrey(int[] secondArr) {
         if (secondArr == null) {
             throw new IllegalArgumentException("incoming array must not be null" +
-                    "In ua.asagayda.HomeWork.Task01_ImitationArrayList.ListImitation.concat");
+                    "In ua.asagayda.HomeWork.task01ImitationArrayList.ListImitation.concat");
         }
 
         if (secondArr.length<=countZeroInArr()){

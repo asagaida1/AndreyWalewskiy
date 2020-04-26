@@ -1,4 +1,4 @@
-package ua.asagayda.homeWork.Task01_ImitationArrayList;
+package ua.asagayda.homeWork.task01ImitationArrayList;
 
 class Main {
 

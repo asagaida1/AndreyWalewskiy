@@ -1,4 +1,4 @@
-package ua.asagayda.homeWork.Task02_MeetPeople;
+package ua.asagayda.homeWork.task02MeetPeople;
 
 import org.jetbrains.annotations.NotNull;
 
