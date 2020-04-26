@@ -28,7 +28,7 @@ class ListImitationTest {
 
         listImitation.printList();
 
-        String log = outRule.getLog();//\n\r1, 2, 0
+        String log = outRule.getLog();
 
         assertTrue(log.contains("1, 2, 0"));
     }
