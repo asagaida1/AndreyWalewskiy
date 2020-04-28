@@ -1,5 +1,5 @@
 package ua.asagayda.homeWork.task02MeetPeople;
 
-enum gender {
+enum Gender { MALE, FEMALE
 
 }

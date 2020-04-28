@@ -1,24 +1,23 @@
 package ua.asagayda.homeWork.task02MeetPeople;
 
 public class RegistrationNewMember {
+    Gender gender;
+
     private String name;
     private int age;
-    private String sex;
     private String city;
     private int countChildren;
 
-    public RegistrationNewMember(String name, int age, String sex, String city, int countChildren) {
+    public RegistrationNewMember(String name, int age, String city, int countChildren) {
         this.name = name;
         this.age = age;
-        this.sex = sex;
         this.city = city;
         this.countChildren = countChildren;
     }
 
-    public RegistrationNewMember(String name, int age, String sex, String city) {
+    public RegistrationNewMember(String name, int age, String city) {
         this.name = name;
         this.age = age;
-        this.sex = sex;
         this.city = city;
     }
 
@@ -36,16 +35,6 @@ public class RegistrationNewMember {
             throw new IllegalArgumentException("Name must be at least 2 characters");
         } else {
             this.name = name;
-            return this;
-        }
-    }
-
-    public RegistrationNewMember setSex(String sex) {
-        if (!sex.equals("man") || !sex.equals("woman")) {
-            throw new IllegalArgumentException("When registering on the site, you can only choose " +
-                    "between two parameters: man,  woman");
-        } else {
-            this.sex = sex;
             return this;
         }
     }
@@ -70,10 +59,6 @@ public class RegistrationNewMember {
 
     public int getAge() {
         return age;
-    }
-
-    public String getSex() {
-        return sex;
     }
 
     public String getCity() {
