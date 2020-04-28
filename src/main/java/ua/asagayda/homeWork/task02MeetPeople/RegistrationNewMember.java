@@ -1,7 +1,5 @@
 package ua.asagayda.homeWork.task02MeetPeople;
 
-//import org.jetbrains.annotations.NotNull;
-
 public class RegistrationNewMember {
     private String name;
     private int age;
