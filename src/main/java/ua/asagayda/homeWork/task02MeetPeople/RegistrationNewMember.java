@@ -1,5 +1,7 @@
 package ua.asagayda.homeWork.task02MeetPeople;
 
+import java.util.Objects;
+
 public class RegistrationNewMember {
     Gender gender;
 
@@ -8,17 +10,12 @@ public class RegistrationNewMember {
     private String city;
     private int countChildren;
 
-    public RegistrationNewMember(String name, int age, String city, int countChildren) {
-        this.name = name;
-        this.age = age;
-        this.city = city;
-        this.countChildren = countChildren;
-    }
-
-    public RegistrationNewMember(String name, int age, String city) {
-        this.name = name;
-        this.age = age;
-        this.city = city;
+    public RegistrationNewMember(Gender gender, String name, int age, String city, int countChildren) {
+        this.gender = gender;
+        this.setName(name);
+        this.setAge(age);
+        this.setCity(city);
+        this.setCountChildren(countChildren);
     }
 
     public RegistrationNewMember setAge(int age) {
@@ -68,4 +65,34 @@ public class RegistrationNewMember {
     public int getCountChildren() {
         return countChildren;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RegistrationNewMember that = (RegistrationNewMember) o;
+        return age == that.age &&
+                countChildren == that.countChildren &&
+                gender == that.gender &&
+                name.equals(that.name) &&
+                city.equals(that.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(gender, name, age, city, countChildren);
+    }
+
+    @Override
+    public String toString() {
+        return "RegistrationNewMember{" +
+                "gender=" + gender +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", city='" + city + '\'' +
+                ", countChildren=" + countChildren +
+                '}';
+    }
 }
+
+
