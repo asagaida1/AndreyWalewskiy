@@ -1,0 +1,10 @@
+1) Static/nonstatic block initialization
+2) Constants static/nonstatic, string pool
+3) Declare two local variables myStr1 and myStr2 of String type and assign a value “Cartoon” for first string and ”Tomcat”
+   for second.
+   Write code to display all of the letters, which are present in the first word, but absent in the second.
+
+4) Соединить две строки след. вида: ("abc", "drf") результат: ("adbrcf"), ("ab", "drf") результат: ("adbrf"), ("abc", "dr") результат: ("adbrc")
+
+5) Вывести текст, составленный из последних букв всех слов.
+6) Дано слово, состоящее четного числа букв. Вывести на экран его первую половину, не используя оператор цикла.

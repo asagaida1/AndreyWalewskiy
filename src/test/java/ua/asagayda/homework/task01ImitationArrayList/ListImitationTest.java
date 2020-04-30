@@ -1,14 +1,8 @@
-package ua.asagayda.homeWork.task01ImitationArrayList;
+package ua.asagayda.homework.task01ImitationArrayList;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,7 +1,7 @@
 1. + Выдается ошибка когда запускаю проект через Maven.
 2. + В методах
-   ua.asagayda.homeWork.task01ImitationArrayList.ListImitation.printList
-   ua.asagayda.homeWork.task01ImitationArrayList.ListImitation.printListRevers
+   ua.asagayda.homework.task01ImitationArrayList.ListImitation.printList
+   ua.asagayda.homework.task01ImitationArrayList.ListImitation.printListRevers
    применяется
    System.out.print
    System.out.println

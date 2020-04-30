@@ -1,6 +1,4 @@
-package ua.asagayda.homeWork.task01ImitationArrayList;
-
-import java.util.Arrays;
+package ua.asagayda.homework.task01ImitationArrayList;
 
 public class ListImitation {
     private int[] arr;
@@ -12,7 +10,7 @@ public class ListImitation {
     public ListImitation(int size) {
         if (size<1){
             throw new IllegalArgumentException("int \"size\" cannot be zerro or less than zero. " +
-                    "ua.asagayda.homeWork.task01ImitationArrayList.ListImitation.ListImitation");
+                    "ua.asagayda.homework.task01ImitationArrayList.ListImitation.ListImitation");
         }
 
         arr = new int[size];
