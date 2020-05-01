@@ -20,3 +20,9 @@
 =============
 7. + как удалить переменную из всех  методов и конструкторов?
 8. как установить enum через reg3.gender, в методе Main;
+
+=============
+9. +Static/nonstatic block initialization, а как же значение по умолчанию? (int i; System.out.println(i) --> Ошибка инициализации;)
+10. Непонятные ошибки "NullPointerException" в ua.asagayda.homework.task03.string.task01.Main
+
+
