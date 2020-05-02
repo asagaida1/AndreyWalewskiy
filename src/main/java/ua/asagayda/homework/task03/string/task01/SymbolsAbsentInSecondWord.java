@@ -20,7 +20,7 @@ public class SymbolsAbsentInSecondWord {
     String showSymbols() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < firstWord.length(); i++) {
-            if (secondWord.indexOf(firstWord.charAt(i)) > 0) {
+            if (secondWord.indexOf(firstWord.charAt(i)) < 0) {
                 sb.append(firstWord.charAt(i));
             }
         }

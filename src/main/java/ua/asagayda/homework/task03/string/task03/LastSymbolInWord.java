@@ -13,11 +13,13 @@ public class LastSymbolInWord {
         this.str = str;
     }
 
-    String showLastSymbol(){
+    String showLastSymbol() {
         StringBuilder sb = new StringBuilder();
-        String [] arr = str.split(" ");
-        for (String s: arr) {
-            sb.append(s.charAt(s.length()-1));
+
+        String[] arr = str.split(" ");
+
+        for (String s : arr) {
+            sb.append(s.charAt(s.length() - 1));
         }
         return sb.toString();
     }
