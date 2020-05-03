@@ -44,7 +44,7 @@ public class RegEx {
         while (matcher.find()) {
             /*System.out.println(matcher.group());*/
             int i = Integer.parseInt(matcher.group());
-            sum=sum+i;
+            sum = sum + i;
         }
         System.out.println("sum = " + sum);
 
@@ -74,13 +74,12 @@ public class RegEx {
         System.out.println(Pattern.matches(pattern7, text76));
         System.out.println(Pattern.matches(pattern7, text77));
         System.out.println("=====================================Life MTS KievStar");
-        String Life1 = ("^(\\()(093|073|063){3}(\\))");
 
         String Life = ("^(\\()(093||073||063){3}(\\))" +
-                "(\\d){3}(-)(\\d){2}(-){1}(\\d){2}");
+                "(\\d){3}(-)(\\d){2}(-)(\\d){2}");
         String MTS = ("^(\\()((095)||(099)){3}(\\))" +
-                "(\\d){3}(-)(\\d){2}(-){1}(\\d){2}");
-        String KievStar = ("^(\\(){1}((097)||(067)){3}(\\))" +
+                "(\\d){3}(-)(\\d){2}(-)(\\d){2}");
+        String KievStar = ("^(\\()((097)||(067)){3}(\\))" +
                 "(\\d){3}(-)(\\d){2}(-)(\\d){2}");
 
         System.out.println(Pattern.matches(Life, text71));
@@ -102,21 +101,14 @@ public class RegEx {
         list.add(text77);
 
 
-        Pattern patternLife = Pattern.compile(Life1);
-        Pattern patternMTS = Pattern.compile(MTS);
-        Pattern patternKievStar = Pattern.compile(KievStar);
-
-        for (String s:list) {
-            if(Pattern.matches(Life, s)){
+        for (String s : list) {
+            if (Pattern.matches(Life, s)) {
                 System.out.println("Пользователь имеет Лайф номер    : " + s);
-            }
-            else if (Pattern.matches(MTS, s)){
+            } else if (Pattern.matches(MTS, s)) {
                 System.out.println("Пользователь имеет МТС номер     : " + s);
-            }
-            else if (Pattern.matches(KievStar, s)){
+            } else if (Pattern.matches(KievStar, s)) {
                 System.out.println("Пользователь имеет KievStar номер: " + s);
-            }
-            else {
+            } else {
                 System.out.println("Совпадение не найдено :(");
             }
         }
