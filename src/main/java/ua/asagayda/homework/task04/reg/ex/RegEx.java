@@ -30,7 +30,7 @@ public class RegEx {
 
 // Пользователь вводит имя и фамилию. Буквы могут быть в разных регистрах.
 // Проверить, чтобы первые буквы были в верхнем регистре, а остальные буквы - в нижнем.
-        String text5 = "Александр Sagaida";
+        String text5 = "АФксандр Sgaida";
         String pattern5 = ("^([A-ZА-Я])([a-zа-я]+)\\s([A-ZА-Я])([a-zа-я])+$");
         System.out.println(Pattern.matches(pattern5, text5));
 
