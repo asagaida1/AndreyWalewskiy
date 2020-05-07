@@ -3,6 +3,10 @@ package ua.asagayda.homework.task04.reg.ex;
 public class StaticTest {
     private static int i;
 
+    {
+        i=0;
+    }
+
     public StaticTest() {
         i++;
     }
