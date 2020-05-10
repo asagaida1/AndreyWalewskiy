@@ -51,6 +51,15 @@ public class PhoneNumberRegEx {
         Matcher matcherMTS = patternMTS.matcher(text);
         Matcher matcherKievStar = patternKievStar.matcher(text);
 
+        //(\\d){3}
+
+        switch ("095") {
+            case "095":
+            case "066":
+                System.out.println("MTS");
+                break;
+        }
+
         if(matcherLife.find()){
             return sb.append("Пользователь имеет Лайф номер, код оператора: ").append(matcherLife.group()).toString();
         }

@@ -1,0 +1,2 @@
+1) RefactorInheritance
+2) Polimorphysm, SoftServe  

@@ -3,7 +3,7 @@ package ua.asagayda.homework.task04.reg.ex;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PhoneNumberMain {
+public class PhoneNumberRegExMain {
     public static void main(String[] args) {
         PhoneNumberRegEx p = new PhoneNumberRegEx();
 
