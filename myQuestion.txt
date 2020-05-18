@@ -24,5 +24,8 @@
 =============
 9. +Static/nonstatic block initialization, а как же значение по умолчанию? (int i; System.out.println(i) --> Ошибка инициализации;)
 10. Непонятные ошибки "NullPointerException" в ua.asagayda.homework.task03.string.task01.Main
+=============
+11. Как привильно организовать в классах equals и hashCode?(что выбирать а что не выбирать)
 
+=============
 

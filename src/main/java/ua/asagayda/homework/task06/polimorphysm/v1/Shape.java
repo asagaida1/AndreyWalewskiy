@@ -1,14 +1,6 @@
-1) RefactorInheritance
-2) Polimorphysm,   SoftServe
+package ua.asagayda.homework.task06.polimorphysm.v1;
 
-Please create an abstarct class Shape and two subclasses Square and Circle. Replace code in method drawShape()
-according to principles of polymorphism. Please propose the other solutions for improving quality of the code.
-
-enum ShareType {
-    SQUARE, CIRCLE
-}
-
-class Shape {
+public abstract class Shape {
     private ShareType shareType;
 
     //other fields

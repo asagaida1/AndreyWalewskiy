@@ -17,4 +17,9 @@ public class Bmw extends Car {//is-a
         this.bmwModel = bmwModel;
         return this;
     }
+
+    @Override
+    void printOne() {
+
+    }
 }
