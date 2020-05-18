@@ -1,11 +1,14 @@
 package ua.asagayda.homework.task05.Inheritance.refactor2;
 
-public class Book extends Author {
-    int countOfpages;
-    String nameBook;
-    Boolean isUpdated;
-    int year;
-    int volume;
+public class Book extends Reference {
+    private int countOfpages;
+    private String nameBook;
+
+    public Book(Boolean isUpdated, int year, int volume, Author author, int countOfpages, String nameBook) {
+        super(isUpdated, year, volume, author);
+        this.countOfpages = countOfpages;
+        this.nameBook = nameBook;
+    }
 
     public int getCountOfpages() {
         return countOfpages;
@@ -25,30 +28,4 @@ public class Book extends Author {
         return this;
     }
 
-    public Boolean getUpdated() {
-        return isUpdated;
-    }
-
-    public Book setUpdated(Boolean updated) {
-        isUpdated = updated;
-        return this;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public Book setYear(int year) {
-        this.year = year;
-        return this;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public Book setVolume(int volume) {
-        this.volume = volume;
-        return this;
-    }
 }
