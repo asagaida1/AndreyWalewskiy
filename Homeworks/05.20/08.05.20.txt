@@ -1,8 +1,12 @@
 1) RefactorInheritance
 2) Polimorphysm,   SoftServe
 
-Please create an abstarct class Shape and two subclasses Square and Circle. Replace code in method drawShape()
-according to principles of polymorphism. Please propose the other solutions for improving quality of the code.
+Please create an abstarct class Shape
+and two subclasses Square and Circle.
+Replace code in method drawShape()
+according to principles of polymorphism.
+Please propose the other solutions for
+improving quality of the code.
 
 enum ShareType {
     SQUARE, CIRCLE
