@@ -1,6 +1,6 @@
 package ua.asagayda.homework.task06.polimorphysm.v3;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements DrawCircle{
     @Override
     public void drawShape(){
         System.out.println("drawShape Circle");
