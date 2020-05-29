@@ -9,10 +9,6 @@ public class Main {
         circle.drawShape();
         square.drawShape();
 
-
-        circle.drawCircle();
-        square.drawSquare();
-
         draw(circle);
         draw(square);
     }
