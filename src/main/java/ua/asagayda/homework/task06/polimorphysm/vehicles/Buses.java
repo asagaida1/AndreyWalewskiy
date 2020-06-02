@@ -12,4 +12,7 @@ public class Buses extends Vehicles{
     public void Brake() {
         System.out.println("Buses brake");
     }
+
+
+
 }
