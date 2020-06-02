@@ -28,4 +28,4 @@
 11. Как привильно организовать в классах equals и hashCode?(что выбирать а что не выбирать)
 
 =============
-
+12. разница между "Merge into Current" и "Rebase Current onto Selected"
