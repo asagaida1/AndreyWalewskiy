@@ -1,8 +1,13 @@
 package ua.asagayda.homework.task06.polimorphysm.vehicles;
 
+
+
 public abstract class Vehicles {
+//    Fuel fuel;
     private int wheels;
+
     public abstract void Accelerate();
+
     public abstract void Brake();
 
     public int getWheels() {
