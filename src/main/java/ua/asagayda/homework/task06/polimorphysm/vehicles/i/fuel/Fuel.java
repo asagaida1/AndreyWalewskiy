@@ -1,4 +1,4 @@
-package ua.asagayda.homework.task06.polimorphysm.vehicles.fuel;
+package ua.asagayda.homework.task06.polimorphysm.vehicles.i.fuel;
 
 public interface Fuel {
     default void runDiesel() {

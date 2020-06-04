@@ -6,8 +6,8 @@
     Vehicles. There are different kind of vehicles - cars, trucks, buses.
     Cars could be different kind as well - suv, racing car, compact car.
 
-    Vehicle runs on some fuel - gasoline, diesel, electricity.
-    Its possible to fuel car. If wrong fuel is used - car should break. (exception)
+    Vehicle runs on some fuelable - gasoline, diesel, electricity.
+    Its possible to fuelable car. If wrong fuelable is used - car should break. (exception)
     All vehicles can do some actions: like accelerate or brake.
 
     Each and every vehicle has wheels. But trucks & buses has more wheels than cars.

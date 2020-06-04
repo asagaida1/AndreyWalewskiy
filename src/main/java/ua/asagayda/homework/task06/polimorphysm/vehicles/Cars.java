@@ -1,14 +1,20 @@
 package ua.asagayda.homework.task06.polimorphysm.vehicles;
 
-public abstract class Cars extends Vehicles {
+import ua.asagayda.homework.task06.polimorphysm.vehicles.с.fuel.Fuelable;
 
-    @Override
-    public void Accelerate() {
-        System.out.println("Cars accelerate");
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Cars extends Vehicles {
+    private int wheels;
+    private List<Fuelable> fuelables;
+
+    public Cars(int wheels) {
+        this.wheels = wheels;
+        fuelables = new ArrayList<>();
     }
 
-    @Override
-    public void Brake() {
-        System.out.println("Cars brake");
+    public void addFuelable(Fuelable fuelable) {
+        fuelables.add(fuelable);
     }
 }
