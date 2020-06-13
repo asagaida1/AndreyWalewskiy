@@ -34,6 +34,8 @@ public class Buses extends Vehicles{
         System.out.println("Buses brake");
     }
 
+    @Override
+    public void fuel(Fuelable fuelable) {
 
-
+    }
 }

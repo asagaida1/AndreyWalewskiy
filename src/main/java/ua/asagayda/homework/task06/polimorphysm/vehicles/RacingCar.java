@@ -6,6 +6,12 @@ public class RacingCar extends Cars {
     private int wheels;
     Fuelable fuelable;
 
+    public RacingCar(int wheels, Fuelable fuelable, int wheels1, Fuelable fuelable1) {
+        super(wheels, fuelable);
+        this.wheels = wheels1;
+        this.fuelable = fuelable1;
+    }
+
     public int getWheels() {
         return wheels;
     }
@@ -32,5 +38,10 @@ public class RacingCar extends Cars {
     @Override
     public void brake() {
         System.out.println("RacingCar Brake");
+    }
+
+    @Override
+    public void fuel(Fuelable fuelable) {
+
     }
 }

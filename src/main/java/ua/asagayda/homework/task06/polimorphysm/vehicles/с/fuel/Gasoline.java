@@ -1,4 +1,13 @@
 package ua.asagayda.homework.task06.polimorphysm.vehicles.с.fuel;
 
-public class Gasoline extends Fuelable {
+public class Gasoline implements Fuelable {
+
+    @Override
+    public void fuel(Fuelable fuelable) {
+    }
+
+    @Override
+    public String toString() {
+        return "Gasoline";
+    }
 }

@@ -1,9 +1,11 @@
 package ua.asagayda.homework.task06.polimorphysm.vehicles;
 
+import ua.asagayda.homework.task06.polimorphysm.vehicles.с.fuel.Fuelable;
+
 public class Suv extends Cars {
 
-    public Suv(int wheels, int wheels1) {
-        super(wheels);
+    public Suv(int wheels, Fuelable fuelable) {
+        super(wheels, fuelable);
     }
 
     @Override
@@ -14,5 +16,11 @@ public class Suv extends Cars {
     @Override
     public void brake() {
         System.out.println("Suv Brake");
+    }
+
+
+    @Override
+    public void fuel(Fuelable fuelable) {
+
     }
 }

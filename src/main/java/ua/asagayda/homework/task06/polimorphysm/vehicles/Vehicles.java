@@ -1,6 +1,8 @@
 package ua.asagayda.homework.task06.polimorphysm.vehicles;
 
-public abstract class Vehicles {
+import ua.asagayda.homework.task06.polimorphysm.vehicles.с.fuel.Fuelable;
+
+public abstract class Vehicles implements Fuelable {
 
     public abstract void accelerate();
 
