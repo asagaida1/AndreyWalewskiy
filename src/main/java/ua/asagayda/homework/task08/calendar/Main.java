@@ -42,10 +42,5 @@ public class Main {
         System.out.println(localDateTime.now(ZoneOffset.UTC).plusMinutes(15));
         System.out.println(localDateTime.now(ZoneOffset.UTC).plusMinutes(30));
 
-
-
-
-
-
     }
 }
