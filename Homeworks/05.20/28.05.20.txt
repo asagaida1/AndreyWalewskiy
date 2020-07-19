@@ -7,7 +7,7 @@
     Cars could be different kind as well - suv, racing car, compact car.
 
     Vehicle runs on some fuelable - gasoline, diesel, electricity.
-    Its possible to fuelable car. If wrong fuelable is used - car should break. (exception)
+    Its possible to fuelable car. If wrong fuelable is used - car should break. (exception)   ua.asagayda.homework.task06.polimorphysm.vehicles2.Main
     All vehicles can do some actions: like accelerate or brake.
 
     Each and every vehicle has wheels. But trucks & buses has more wheels than cars.
