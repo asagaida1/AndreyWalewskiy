@@ -19,6 +19,10 @@ public class Main {
         compactCar.accelerate();
         System.out.println("compactCar.getFuelablesList() = " + compactCar.getFuelablesList());
         compactCar.fuel(compactCar);
+        System.out.println("========================");
+
+        compactCar.refueling(compactCar.getFuelable()); // Получилось заправить машину.
+        compactCar.refueling(Gasoline);                 // как получить Неправильную заправку?
 
     }
 }

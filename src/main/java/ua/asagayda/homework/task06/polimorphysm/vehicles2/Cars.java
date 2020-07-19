@@ -50,4 +50,13 @@ public abstract class Cars extends Vehicles{
         this.fuelablesList = fuelablesList;
         return this;
     }
+
+    public void refueling (Fuelable fuelable){
+        if (fuelablesList.contains(fuelable)) {
+            System.out.println("Car is correct fuel");
+        }
+        else{
+            System.out.println("Car is not correct fuel. Car is broken");
+        }
+    }
 }
