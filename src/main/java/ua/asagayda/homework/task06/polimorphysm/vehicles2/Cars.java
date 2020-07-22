@@ -20,6 +20,15 @@ public abstract class Cars extends Vehicles{
         fuelablesList.add(fuelable);
     }
 
+    public Cars(int wheels, Fuelable fuelable, Fuelable fuelable2) {
+        this.wheels = wheels;
+        this.fuelable = fuelable;
+        fuelablesList = new ArrayList<>();
+        fuelablesList.add(fuelable);
+        fuelablesList.add(fuelable2);
+    }
+
+
     public int getWheels() {
         return wheels;
     }

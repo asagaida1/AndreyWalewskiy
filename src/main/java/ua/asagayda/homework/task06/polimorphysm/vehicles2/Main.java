@@ -1,6 +1,7 @@
 package ua.asagayda.homework.task06.polimorphysm.vehicles2;
 
 import ua.asagayda.homework.task06.polimorphysm.vehicles2.fuel.Diesel;
+import ua.asagayda.homework.task06.polimorphysm.vehicles2.fuel.Electricity;
 import ua.asagayda.homework.task06.polimorphysm.vehicles2.fuel.Fuelable;
 import ua.asagayda.homework.task06.polimorphysm.vehicles2.fuel.Gasoline;
 
@@ -22,7 +23,17 @@ public class Main {
         System.out.println("========================");
 
         compactCar.refueling(compactCar.getFuelable()); // Получилось заправить машину.
-        compactCar.refueling(Gasoline);                 // как получить Неправильную заправку?
+
+        compactCar.refueling(new Diesel());                 // как получить Неправильную заправку?
+        compactCar.refueling(new Gasoline());                 // как получить Неправильную заправку?
+        System.out.println("=========Hybrid Car==============");
+        HybridCar hybridCar = new HybridCar(4, new Electricity(), new Diesel());
+        hybridCar.refueling(hybridCar.getFuelable());
+        hybridCar.refueling(new Diesel());
+        hybridCar.refueling(new Electricity());
+        hybridCar.refueling(new Gasoline());
+        System.out.println(hybridCar.getFuelablesList());
+
 
     }
 }
