@@ -33,30 +33,15 @@ public class Main {
         myCalendar.addEvent(new MyCalendar(LocalDate.of(2020,8,3), LocalTime.of(22,00),"Go to pi-pi"));
         myCalendar.addEvent(new MyCalendar(LocalDate.of(2020,8,3), LocalTime.of(23,00),"Go to watch tv"));
         System.out.println(myCalendar.list);
-//        System.out.println(myCalendar.list.contains(LocalDate.of(2020,8,3)));
 
-//        for (MyCalendar c: myCalendar.list) {
-//            if(c.getLocalDate().equals(LocalDate.of(2020,8,3))){
-//                    //c.list.contains(LocalDate.of(2020,8,1))){
-//                System.out.println("---");
-//                System.out.println("Дата содержится");
-//                System.out.println(c.getLocalDate());
-//                System.out.println(c.getLocalTime());
-//                System.out.println(c.getString());
-//            }
-//            else {
-//                System.out.println("Дата не найдена");
-//            }
-//
-//        }
         myCalendar.conteinsLocalDate(LocalDate.of(2020,8,3));
         myCalendar.conteinsEvent("Go to home");
         System.out.println("=================================");
         System.out.println("Добавить возможность удалять события.");
         myCalendar.delEventOnLocalDate(LocalDate.of(2020,8,3));
         System.out.println(myCalendar.list);
-//        myCalendar.delEventOnLocalDate(LocalDate.of(2020,8,3));
-//        System.out.println(myCalendar.list);
+        System.out.println("=================================");
+        System.out.println("Позволять пользователю вводить свой город(страну/город), определить его тайм-зону и выводить текущее время, день недели в этой тайм-зоне.");
 
 
 
