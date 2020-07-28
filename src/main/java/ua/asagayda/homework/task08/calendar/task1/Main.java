@@ -2,6 +2,9 @@ package ua.asagayda.homework.task08.calendar.task1;
 
 //1)  Выводить текущее время и дату в нескольких тайм-зонах(на выбор). При выводе даты и времени выводить также события на данный день.
 //2) Создавать событие на конкретную дату и по требованию пользователя выводить список событий. Добавить возможность удалять события.
+//3) Позволять пользователю вводить свой город(страну/город), определить его тайм-зону и выводить текущее время, день недели в этой тайм-зоне.
+//4) По требованию пользователя выводить в консоль дату через неделю, месяц, год.
+
 import java.time.*;
 
 public class Main {
@@ -41,7 +44,20 @@ public class Main {
         myCalendar.delEventOnLocalDate(LocalDate.of(2020,8,3));
         System.out.println(myCalendar.list);
         System.out.println("=================================");
+        System.out.println("AllAvailableCaledarZones: ");
+        myCalendar.getAllAvailableCaledarZones();
+        System.out.println("=================================");
         System.out.println("Позволять пользователю вводить свой город(страну/город), определить его тайм-зону и выводить текущее время, день недели в этой тайм-зоне.");
+
+        myCalendar.getDateTimeWithZoneSameInstant("US/Pacific");
+        myCalendar.getDateTimeWithZoneSameInstant("Europe/Monaco");
+        System.out.println("=================================");
+        System.out.println("По требованию пользователя выводить в консоль дату через неделю, месяц, год.");
+        myCalendar.getLockalDateTimePlusWeek(2);
+        myCalendar.getLockalDateTimePlusMonth(2);
+        myCalendar.getLockalDateTimePlusYears(2);
+        System.out.println("=================================");
+        System.out.println("По требованию пользователя выводить в консоль только время и/или дату, день недели, номер дня в году, количество дней оставшеееся до Нового Года.");
 
 
 

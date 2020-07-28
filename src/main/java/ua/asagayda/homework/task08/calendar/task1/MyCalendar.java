@@ -1,7 +1,6 @@
 package ua.asagayda.homework.task08.calendar.task1;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -11,6 +10,7 @@ public class MyCalendar {
     private LocalTime localTime;
     private String string;
     List <MyCalendar> list = new ArrayList<>();
+    List<String> zones = new ArrayList<>(ZoneId.getAvailableZoneIds());
 
     public MyCalendar(LocalDate localDate, LocalTime localTime, String string) {
         this.localDate = localDate;
@@ -101,6 +101,66 @@ public class MyCalendar {
 //        }
 //
 //    }
+    public void getAllAvailableCaledarZones(){
+
+        zones.forEach(System.out::println);
+    }
+
+//    public void getDateTimeWithZoneSameInstant(String s) {
+//        LocalDate localDate = LocalDate.now();
+//        LocalTime localTime = LocalTime.now();
+//        ZoneId zone = ZoneId.of(s);
+//        ZonedDateTime zonedDateTime = ZonedDateTime.of(localDate, localTime, zone);
+//        ZonedDateTime zdt = zonedDateTime.withZoneSameInstant(ZoneId.of(s));
+//
+//        LocalDateTime ldt = LocalDateTime.now();
+//        ZonedDateTime zdt2 = ldt.atZone(ZoneId.of(s));
+//
+//        System.out.println(zonedDateTime);
+//        System.out.println(zdt);
+//        System.out.println(zdt2);
+//        System.out.println(zdt2.getOffset().getId().replace("Z", "+00:00"));
+//
+//    }
+    public void getDateTimeWithZoneSameInstant(String s) {
+        // your local date/time with no timezone information
+        LocalDateTime localNow = LocalDateTime.now();
+         // setting UTC as the timezone
+        ZonedDateTime zonedUTC = localNow.atZone(ZoneId.of("UTC"));
+         // converting to IST
+        ZonedDateTime zonedIST = zonedUTC.withZoneSameInstant(ZoneId.of(s));
+        System.out.println(zonedIST.getOffset()+" "+zonedIST.getHour() + ":" + zonedIST.getMinute()+ " " +zonedIST.getDayOfWeek());
+    }
+
+    public void getLockalDateTimePlusWeek(Integer integer){
+        LocalDateTime localDateTime = LocalDateTime.now();
+        System.out.println(
+                 localDateTime.plusWeeks(integer).getYear()+"-"
+                +localDateTime.plusWeeks(integer).getMonthValue()+"-"
+                +localDateTime.plusWeeks(integer).getDayOfMonth()+" "
+                +localDateTime.plusWeeks(integer).getHour()+":"
+                +localDateTime.plusWeeks(integer).getMinute()+" PlusWeek = "+integer);
+    }
+
+        public void getLockalDateTimePlusMonth(Integer integer){
+        LocalDateTime localDateTime = LocalDateTime.now();
+        System.out.println(
+                 localDateTime.plusMonths(integer).getYear()+"-"
+                +localDateTime.plusMonths(integer).getMonthValue()+"-"
+                +localDateTime.plusMonths(integer).getDayOfMonth()+" "
+                +localDateTime.plusMonths(integer).getHour()+":"
+                +localDateTime.plusMonths(integer).getMinute()+" PlusMonth = "+integer);
+    }
+
+            public void getLockalDateTimePlusYears(Integer integer){
+        LocalDateTime localDateTime = LocalDateTime.now();
+        System.out.println(
+                 localDateTime.plusYears(integer).getYear()+"-"
+                +localDateTime.plusYears(integer).getMonthValue()+"-"
+                +localDateTime.plusYears(integer).getDayOfMonth()+" "
+                +localDateTime.plusYears(integer).getHour()+":"
+                +localDateTime.plusYears(integer).getMinute()+" PlusYears = "+integer);
+    }
 
     public LocalDate getLocalDate() {
         return localDate;
