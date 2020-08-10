@@ -1,6 +1,8 @@
 package ua.asagayda.homework.task08.calendar.task1;
 
 import java.time.*;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -176,6 +178,27 @@ public class MyCalendar {
 
     public void setLocalTime(LocalTime localTime) {
         this.localTime = localTime;
+    }
+
+    public String getLocalDayOfWeek (){
+        return localDate.getDayOfWeek().toString();
+    }
+
+    public Integer getDayOfYear(){
+        return localDate.getDayOfYear();
+    }
+
+    public Long getCountDaysToEndYear(){
+        LocalDate lastDayOfYear = localDate.with(TemporalAdjusters.lastDayOfYear());
+        LocalDate localDateNow = LocalDate.now();
+        Period period = localDateNow.until(lastDayOfYear);
+        System.out.println("lastDayOfYear: " + lastDayOfYear);
+        System.out.println("LocalDateNow: " + localDateNow);
+        System.out.println("period: " + period.getMonths());
+        System.out.println("period.getDays(): " + period.getDays());
+
+        System.out.println("ChronoUnit.DAYS.between: " + ChronoUnit.DAYS.between(localDateNow, lastDayOfYear));
+        return ChronoUnit.DAYS.between(localDateNow, lastDayOfYear);
     }
 
     public String getString() {

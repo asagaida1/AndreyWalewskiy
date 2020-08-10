@@ -58,6 +58,12 @@ public class Main {
         myCalendar.getLockalDateTimePlusYears(2);
         System.out.println("=================================");
         System.out.println("По требованию пользователя выводить в консоль только время и/или дату, день недели, номер дня в году, количество дней оставшеееся до Нового Года.");
+        System.out.println(myCalendar.getLocalTime() + " только время");
+        System.out.println(myCalendar.getLocalDate() + " только дату");
+        System.out.println(myCalendar.getLocalDayOfWeek() + " текущий день недели");
+        System.out.println(myCalendar.getDayOfYear() + " номер дня в году");
+        System.out.println(myCalendar.getCountDaysToEndYear() + " количество дней оставшеееся до Нового Года");
+
 
 
 
