@@ -11,44 +11,43 @@ public class MyCalendar {
     private LocalDate localDate;
     private LocalTime localTime;
     private String string;
-    List <MyCalendar> list = new ArrayList<>();
-    List<String> zones = new ArrayList<>(ZoneId.getAvailableZoneIds());
+    private List<MyCalendar> list;
+    private List<Event> events;
+    public static final List<String> ZONES = new ArrayList<>(ZoneId.getAvailableZoneIds());
 
     public MyCalendar(LocalDate localDate, LocalTime localTime, String string) {
         this.localDate = localDate;
         this.localTime = localTime;
         this.string = string;
+        list = new ArrayList<>();
     }
 
-    public void addEvent(MyCalendar myCalendar){
+    public void addEvent(MyCalendar myCalendar) {
         list.add(myCalendar);
     }
 
-
-    public void conteinsLocalDate(LocalDate localDate){
-        for (MyCalendar c: list) {
-            if(c.getLocalDate().equals(localDate)){
-                System.out.println("---");
-                System.out.println("Дата содержится");
+    public void containsLocalDate(LocalDate localDate) {
+        for (MyCalendar c : list) {
+            if (c.getLocalDate().equals(localDate)) {
+                System.out.println("---\n Дата содержится\n" + c.getLocalDate());
                 System.out.println(c.getLocalDate());
                 System.out.println(c.getLocalTime());
                 System.out.println(c.getString());
-            }
-            else{
+            } else {
                 System.out.println("Дата не найдена");
             }
         }
     }
-    public void conteinsEvent(String s){
-        for (MyCalendar c: list) {
-            if(c.getString().equals(s)){
+
+    public void conteinsEvent(String s) {
+        for (MyCalendar c : list) {
+            if (c.getString().equals(s)) {
                 System.out.println("---");
                 System.out.println("Событие содержится");
                 System.out.println(c.getLocalDate());
                 System.out.println(c.getLocalTime());
                 System.out.println(c.getString());
-            }
-            else{
+            } else {
                 System.out.println("Дата не найдена");
             }
 
@@ -70,14 +69,15 @@ public class MyCalendar {
 //        System.out.println("End cycle");
 //    }
 
-    public void delEventOnLocalDate(LocalDate localDate) {
+    public void deleteEventByDate(LocalDate localDate) {
         for (int i = 0; i < list.size(); i++) {
             for (int j = i; j < list.size(); j++) {
-                if (localDate.equals(list.get(j).getLocalDate())) {
+                MyCalendar myCalendar = list.get(j);
+                if (localDate.equals(myCalendar.getLocalDate())) {
                     System.out.println("Event can be remove. LocalDate is equals");
-                    System.out.println(list.get(j).getLocalDate());
-                    System.out.println(list.get(j).getLocalTime());
-                    System.out.println(list.get(j).getString());
+                    System.out.println(myCalendar.getLocalDate());
+                    System.out.println(myCalendar.getLocalTime());
+                    System.out.println(myCalendar.getString());
                     list.remove(j);
                 }
                 System.out.println("End j(sub) cycle");
@@ -87,7 +87,7 @@ public class MyCalendar {
     }
 
 
-//        for (MyCalendar c: list) {
+    //        for (MyCalendar c: list) {
 //            if(c.getLocalDate().equals(localDate)){
 //                System.out.println("---");
 //                System.out.println("Событие содержитдату и будет удалено:");
@@ -103,12 +103,12 @@ public class MyCalendar {
 //        }
 //
 //    }
-    public void getAllAvailableCaledarZones(){
+    public void getAllAvailableCaledarZones() {
 
-        zones.forEach(System.out::println);
+        ZONES.forEach(System.out::println);
     }
 
-//    public void getDateTimeWithZoneSameInstant(String s) {
+    //    public void getDateTimeWithZoneSameInstant(String s) {
 //        LocalDate localDate = LocalDate.now();
 //        LocalTime localTime = LocalTime.now();
 //        ZoneId zone = ZoneId.of(s);
@@ -127,41 +127,41 @@ public class MyCalendar {
     public void getDateTimeWithZoneSameInstant(String s) {
         // your local date/time with no timezone information
         LocalDateTime localNow = LocalDateTime.now();
-         // setting UTC as the timezone
+        // setting UTC as the timezone
         ZonedDateTime zonedUTC = localNow.atZone(ZoneId.of("UTC"));
-         // converting to IST
+        // converting to IST
         ZonedDateTime zonedIST = zonedUTC.withZoneSameInstant(ZoneId.of(s));
-        System.out.println(zonedIST.getOffset()+" "+zonedIST.getHour() + ":" + zonedIST.getMinute()+ " " +zonedIST.getDayOfWeek());
+        System.out.println(zonedIST.getOffset() + " " + zonedIST.getHour() + ":" + zonedIST.getMinute() + " " + zonedIST.getDayOfWeek());
     }
 
-    public void getLockalDateTimePlusWeek(Integer integer){
+    public void getLockalDateTimePlusWeek(Integer integer) {
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println(
-                 localDateTime.plusWeeks(integer).getYear()+"-"
-                +localDateTime.plusWeeks(integer).getMonthValue()+"-"
-                +localDateTime.plusWeeks(integer).getDayOfMonth()+" "
-                +localDateTime.plusWeeks(integer).getHour()+":"
-                +localDateTime.plusWeeks(integer).getMinute()+" PlusWeek = "+integer);
+                localDateTime.plusWeeks(integer).getYear() + "-"
+                        + localDateTime.plusWeeks(integer).getMonthValue() + "-"
+                        + localDateTime.plusWeeks(integer).getDayOfMonth() + " "
+                        + localDateTime.plusWeeks(integer).getHour() + ":"
+                        + localDateTime.plusWeeks(integer).getMinute() + " PlusWeek = " + integer);
     }
 
-        public void getLockalDateTimePlusMonth(Integer integer){
+    public void getLockalDateTimePlusMonth(Integer integer) {
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println(
-                 localDateTime.plusMonths(integer).getYear()+"-"
-                +localDateTime.plusMonths(integer).getMonthValue()+"-"
-                +localDateTime.plusMonths(integer).getDayOfMonth()+" "
-                +localDateTime.plusMonths(integer).getHour()+":"
-                +localDateTime.plusMonths(integer).getMinute()+" PlusMonth = "+integer);
+                localDateTime.plusMonths(integer).getYear() + "-"
+                        + localDateTime.plusMonths(integer).getMonthValue() + "-"
+                        + localDateTime.plusMonths(integer).getDayOfMonth() + " "
+                        + localDateTime.plusMonths(integer).getHour() + ":"
+                        + localDateTime.plusMonths(integer).getMinute() + " PlusMonth = " + integer);
     }
 
-            public void getLockalDateTimePlusYears(Integer integer){
+    public void getLockalDateTimePlusYears(Integer integer) {
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println(
-                 localDateTime.plusYears(integer).getYear()+"-"
-                +localDateTime.plusYears(integer).getMonthValue()+"-"
-                +localDateTime.plusYears(integer).getDayOfMonth()+" "
-                +localDateTime.plusYears(integer).getHour()+":"
-                +localDateTime.plusYears(integer).getMinute()+" PlusYears = "+integer);
+                localDateTime.plusYears(integer).getYear() + "-"
+                        + localDateTime.plusYears(integer).getMonthValue() + "-"
+                        + localDateTime.plusYears(integer).getDayOfMonth() + " "
+                        + localDateTime.plusYears(integer).getHour() + ":"
+                        + localDateTime.plusYears(integer).getMinute() + " PlusYears = " + integer);
     }
 
     public LocalDate getLocalDate() {
@@ -180,15 +180,15 @@ public class MyCalendar {
         this.localTime = localTime;
     }
 
-    public String getLocalDayOfWeek (){
+    public String getLocalDayOfWeek() {
         return localDate.getDayOfWeek().toString();
     }
 
-    public Integer getDayOfYear(){
+    public int getDayOfYear() {
         return localDate.getDayOfYear();
     }
 
-    public Long getCountDaysToEndYear(){
+    public Long getCountDaysToEndYear() {
         LocalDate lastDayOfYear = localDate.with(TemporalAdjusters.lastDayOfYear());
         LocalDate localDateNow = LocalDate.now();
         Period period = localDateNow.until(lastDayOfYear);
